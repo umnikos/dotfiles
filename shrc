@@ -1,0 +1,130 @@
+# umask 27 # bad idea if you can't make gnome obey it and I can't...
+
+# --- basics --- 
+alias x="xargs -0"
+alias v=hx # used to be vim
+  alias n="v ~/notes"
+  alias shrc="v ~/.shrc"
+  alias vimrc="v ~/.vimrc"
+  alias hxrc="v ~/.config/helix/config.toml"
+alias sudo="sudo -s"
+alias cls=clear
+alias hexdump="hexdump -C"
+alias f="thunar . >/dev/null 2>&1"
+alias open="xdg-open"
+  alias oo="open"
+  alias o="open >/dev/null 2>&1"
+alias copy="rsync -avP"
+  alias perfect-copy="copy -xAXUH" # -N not supported
+    alias pcopy="perfect-copy"
+  alias ccopy="copy -z"
+alias du="du -hsc"
+  alias duh="du ./*"
+alias df="df -h"
+alias top="btop"
+  alias cpu-top="s-tui"
+  alias gpu-top="sudo intel_gpu_top"
+  alias io-top="sudo iotop"
+  #alias disk-top="sudo watch iostat -x sda sdb"
+  alias disk-top="dstat -D"
+alias c="cd"
+#alias rg="grep" # ripgrep is actually called rg so no alias needed
+alias l="exa" # keep ls as regular ls
+  alias la="l -a"
+  alias ll="l -l"
+    alias llg="ll -g"
+      alias lg="llg"
+    alias lla="ll -a"
+alias fd="fdfind"
+  alias l1="fd -d 1"
+    alias lf="l1 -t f"
+      alias lfs="lf -X ls -tr1"
+    alias ld="l1 -t d"
+alias del="rm -r"
+alias http="python3 -m http.server" # makes an http server for the current dir
+  alias ftp="http"
+alias toilet="toilet --font mono9 --width 151"
+
+# --- job-specific ---
+alias p="lp -o media=a4" # printing
+alias mp3tag=id3
+alias webmtag=mkvpropedit
+alias md="grip" # md for "markdown"
+alias yt-dl="yt-dlp"
+  alias yt-music="yt-dl -f 251"
+alias tm="transmission-remote"
+alias torrents="stig"
+
+# --- frivolous ---
+alias bat="batcat"
+  alias bcat="batcat"
+alias cmatrix="cmatrix -b -C blue"
+alias bonsai="cbonsai -i -M 3 -w 30"
+alias ed="ed -p\*"
+
+# --- programming ---
+
+alias gcc="gcc -Wall -pedantic -g"
+  alias arm-gcc=arm-linux-gnueabi-gcc
+alias factr="~/Launchers/factor/factor"
+alias m="py" # used to be bc, then orpie, then factor, then sage
+  alias mm="c ~/Mathematics; sage --notebook"
+alias intellij="~/Launchers/idea-IC-193.6494.35/bin/idea.sh"
+alias qemu-64="qemu-system-x86_64 -enable-kvm -boot order=d"
+alias py3=python3
+  alias py=py3
+  alias pip=pip3
+alias g="git"
+  alias gclone="g clone --recurse-submodules"
+  alias ga="g add"
+    alias ga.="ga ."
+  alias gc="g commit"
+    alias gcm="gc -m"
+    alias gcam="gc --amend"
+    alias gca="gc --amend --no-edit"
+  alias gch="g checkout --recurse-submodules"
+  alias gs="g status"
+  alias gff="g merge --ff-only"
+  alias gr="g reset"
+    alias grm="gr --mixed"
+    alias grf="grm" # "firm" reset
+    alias grs="gr --soft"
+    alias grh="gr --hard"
+  alias gd="g diff"
+    alias gdiff="gd HEAD~1"
+  alias gl="g lg"
+  alias gp="g push"
+    alias gpp="g pull --rebase && g push" # git pull-push
+  alias gx="g stash"
+    alias gxs="gx push -m"
+    alias gxl="gx list"
+    alias gxr="gx pop"
+#alias edit-ghc="v ~/.config/nixpkgs/config.nix" # no longer using nix for haskell
+#  alias update-ghc="nix-env -f '<nixpkgs>' -iA myHaskellEnv"
+#alias ghc="stack ghc --" # not actually a good idea
+  #alias ghci="stack ghci --"
+alias bfi=tritium # brainfuck interpreter
+
+# --- system admin ---
+alias ZZ=":" # vim fans will get it
+alias upgrade-all="cd ~; upgrade-apt; upgrade-flatpak; upgrade-npm; upgrade-cargo; upgrade-rust; upgrade-stack; upgrade-pip"
+  alias upgrade-apt="sudo apt update; sudo apt upgrade -y && sudo apt dist-upgrade -y && sudo apt autoremove -y"
+  alias upgrade-flatpak="flatpak update -y"
+  alias upgrade-npm="npm upgrade"
+  alias upgrade-cargo="cargo install-update -a"
+  alias upgrade-rust="rustup update"
+  alias upgrade-winetricks="sudo winetricks --self-update; sudo chmod o+rx /usr/bin/winetricks"
+  alias upgrade-stack=":" # no good way
+  alias upgrade-pip=":" # no good way
+  alias upgrade-rust-analyser=":" # installed by curling executable, update manually
+alias burn-usb="sudo dd bs=4M status=progress"
+alias desk="cd ~/Desktop"
+  alias docs="cd ~/Documents"
+  alias downs="cd ~/Downloads"
+  alias specs="cd ~/Documents/Datasheets"
+  alias books="cd ~/Documents/Reading"
+alias darkscreen="brightness 50"
+alias fastfakemouse="xkbset ma 10 10 15 20 10"
+alias ipls="sudo iptables -nvL --line-numbers"
+  alias ip6ls="sudo ip6tables -nvL --line-numbers"
+
