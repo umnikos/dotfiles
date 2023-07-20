@@ -1,0 +1,6 @@
+*
+!.gitignore
+!config.fish
+!functions
+!functions/apt.fish
+**variables*

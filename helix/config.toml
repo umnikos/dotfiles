@@ -1,0 +1,25 @@
+theme = "base16_transparent"
+# theme = "tokyonight"
+
+[editor]
+line-number = "relative"
+mouse = false
+scrolloff = 99
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+# autosave on leaving insert (not after other commands)
+# [keys.insert]
+# "esc" = ["normal_mode", ":write"]
+
+[keys.normal]
+"C-s" = ":w"
+"D" = "kill_to_line_end"
+"X" = "extend_line_above"
+#"C" = ["kill_to_line_end", "insert_mode"]
+
+[keys.insert]
+"C-s" = ":w"

@@ -1,5 +1,0 @@
-fish/**
-!fish/config.fish
-!fish/functions
-!fish/functions/apt.fish
-fish/**variables*
