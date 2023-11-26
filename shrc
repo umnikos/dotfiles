@@ -2,6 +2,8 @@
 
 # --- basics --- 
 alias x="xargs -0"
+alias t="distrobox"
+  alias te="t enter"
 alias v=hx # used to be vim
   alias n="v ~/notes"
   alias shrc="v ~/.shrc"
@@ -52,6 +54,7 @@ alias webmtag=mkvpropedit
 alias md="grip" # md for "markdown"
 alias yt-dl="yt-dlp"
   alias yt-music="yt-dl -f 251"
+    alias ytm=yt-music
 alias tm="transmission-remote"
 alias torrents="stig"
 
@@ -94,7 +97,8 @@ alias g="git"
     alias gdiff="gd HEAD~1"
   alias gl="g lg"
   alias gp="g push"
-    alias gpp="g pull --rebase && g push" # git pull-push
+    alias gP="g pull --rebase"
+    alias gpp="gP && gp"
   alias gx="g stash"
     alias gxs="gx push -m"
     alias gxl="gx list"
