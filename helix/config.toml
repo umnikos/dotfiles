@@ -1,5 +1,5 @@
 theme = "base16_transparent"
-# theme = "tokyonight"
+# theme = "monokai_pro"
 
 [editor]
 line-number = "relative"
